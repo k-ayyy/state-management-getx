@@ -38,7 +38,7 @@ class CartPage extends StatelessWidget {
                     width: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(26),
-                      color: Colors.deepOrange,
+                      color: Colors.blueAccent,
                     ),
                     child: IconButton(
                       icon: Icon(
@@ -65,7 +65,7 @@ class CartPage extends StatelessWidget {
                     width: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(26),
-                      color: Colors.deepOrange,
+                      color: Colors.blueAccent,
                     ),
                     child: IconButton(
                       icon: Icon(
@@ -97,7 +97,7 @@ class CartPage extends StatelessWidget {
                     width: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(26),
-                      color: Colors.deepOrange,
+                      color: Colors.blueAccent,
                     ),
                     child: IconButton(
                       icon: Icon(
@@ -124,7 +124,7 @@ class CartPage extends StatelessWidget {
                     width: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(26),
-                      color: Colors.deepOrange,
+                      color: Colors.blueAccent,
                     ),
                     child: IconButton(
                       icon: Icon(
@@ -145,7 +145,7 @@ class CartPage extends StatelessWidget {
                     "Total Amounts",
                     style: TextStyle(
                       fontSize: 24,
-                      color: Colors.blueGrey,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(
