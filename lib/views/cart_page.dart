@@ -16,13 +16,23 @@ class CartPage extends StatelessWidget {
       ),
       body: SafeArea(
         bottom: false,
-        child: Container(
-          padding: EdgeInsets.all(30),
+        child: Padding(
+          padding: const EdgeInsets.all(14.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
                 children: <Widget>[
+                  Text(
+                    "Laptop",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
                   Container(
                     height: 50,
                     width: 50,
@@ -35,11 +45,20 @@ class CartPage extends StatelessWidget {
                         Icons.add,
                         color: Colors.white,
                       ),
-                      onPressed: () => null,
+                      onPressed: () => cartController.incrementLaptop(),
                     ),
                   ),
                   SizedBox(
-                    width: 45,
+                    width: 30,
+                  ),
+                  Obx(() => Text(
+                        "${cartController.laptopCounter.toString()}",
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      )), // display the counter
+                  SizedBox(
+                    width: 30,
                   ),
                   Container(
                     height: 50,
@@ -53,7 +72,91 @@ class CartPage extends StatelessWidget {
                         Icons.remove,
                         color: Colors.white,
                       ),
-                      onPressed: () => null,
+                      onPressed: () => cartController.decrementLaptop()(),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: <Widget>[
+                  Text(
+                    "Mouse",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(26),
+                      color: Colors.deepOrange,
+                    ),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
+                      onPressed: () => cartController.incrementMouse()(),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Obx(() => Text(
+                        "${cartController.mouseCounter.toString()}",
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      )), // display the counter
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(26),
+                      color: Colors.deepOrange,
+                    ),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.remove,
+                        color: Colors.white,
+                      ),
+                      onPressed: () => cartController.decrementMouse()(),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                children: <Widget>[
+                  Text(
+                    "Total Amounts",
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Obx(
+                    () => Text(
+                      "${cartController.sum.toString()}",
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
                     ),
                   ),
                 ],

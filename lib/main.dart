@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Cart Counter",
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.blueGrey,
         //  visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: CartPage(),
